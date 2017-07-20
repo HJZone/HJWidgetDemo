@@ -83,5 +83,18 @@
 
 ## 通过NSUserDefaults来实现数据共享    
 
-sss
-      
+存数据：
+```objc
+/**    这里是采用NSUserDefaults来实现   **/
+    NSUserDefaults *sharedDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.hjfirst"];
+    [sharedDefault setObject:@{@"name" : [_titleArray objectAtIndex:sender.tag - 120]} forKey:@"firstStatus"];
+    [sharedDefault setBool:NO forKey:@"isSendData"];
+    [sharedDefault synchronize];
+    ```
+
+
+取数据   
+
+
+
+
