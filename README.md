@@ -63,23 +63,6 @@
     return result;
 }
 ```   
-取数据
-      ```objc
-      /**
- 通过NSFileManager读取数据
-
- @return 读取到的数据
- */
-- (NSString *)readDataByNSFileManager
-{
-    NSError *err = nil;
-    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.hjfirst"];
-    containerURL = [containerURL URLByAppendingPathComponent:@"Library/Caches/widget"];
-    NSString *value = [NSString stringWithContentsOfURL:containerURL encoding:NSUTF8StringEncoding error:&err];
-    return value;
-}
-
-
       
    
 ## 通过NSUserDefaults来实现数据共享   
