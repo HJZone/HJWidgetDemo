@@ -5,7 +5,8 @@
    
 <div align=center><img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/012.png" width="375" height="667" >      <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/011.png" width="375" height="667">
    
-   ## 唤醒Containing APP  
+    
+    ## 唤醒Containing APP  
    
    ```objc  
     
@@ -13,12 +14,12 @@
      NSString *urlString = [NSString stringWithFormat:@"hjWidgetDemo://action=%ld",sender.tag-120];   
      [self.extensionContext openURL:[NSURL URLWithString:urlString] completionHandler:^(BOOL success)    
      {
-        <<if (success == YES) {
-            <<<NSLog(@"跳转成功");
-        <<}
-        <<else
-        <<{
-           <<< NSLog(@"跳转失败");
-        <<}
+        if (success == YES) {
+            NSLog(@"跳转成功");
+        }
+        else
+        {
+            NSLog(@"跳转失败");
+        }
     }];
 ```
