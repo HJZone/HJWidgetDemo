@@ -2,10 +2,11 @@
 --------------
     
         
-     <div align=center>
-     ![image](https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif) 
+   <div align=center>
+   ![image](https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif) 
    
-    
+    <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif" width="150" height="200" alt="图片描述文字"/>
+
    <div align=left>  
    
     
