@@ -12,7 +12,8 @@
    ## 1.唤醒Containing APP  
    
     
-    ```Objective-C
+    ```Objective-C  
+    
      /**   
      这里的URL是有固定格式的，://前边的“hjWidgetDemo”是Containing APP添加的URL Types里添加的URL Schemes，这里是必须一致，否则会跳转失败的   
      **/
