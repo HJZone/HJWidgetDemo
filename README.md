@@ -1,3 +1,3 @@
 # HJWidgetDemo
 
-![image](https://github.com/HJWidgetDemo/HJWidgetDemo/效果图/012.png)
+![image](https://github.com/HJZone/images/blob/master/screenshots/widgetDemo/widget_002.png?raw=true)
