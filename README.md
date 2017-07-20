@@ -11,22 +11,21 @@
     
    ## 1.唤醒Containing APP     
         
-        ``` objc   
-        /*
-     这里的URL是有固定格式的，://前边的“hjWidgetDemo”是Containing APP添加的URL Types里添加的URL Schemes，这里是必须一致，否则会跳转失败的
-     */
-    NSString *urlString = [NSString stringWithFormat:@"hjWidgetDemo://action=%ld",sender.tag-120];
-    
-    [self.extensionContext openURL:[NSURL URLWithString:urlString] completionHandler:^(BOOL success) {
-        if (success == YES) {
-            NSLog(@"跳转成功");
-        }
-        else
-        {
-            NSLog(@"跳转失败");
-        }
-    }];
-    ```
+        ```objc   
+/**
+ 通过NSFileManager读取数据
+
+ @return 读取到的数据
+ */
+- (NSString *)readDataByNSFileManager
+{
+    NSError *err = nil;
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.hjfirst"];
+    containerURL = [containerURL URLByAppendingPathComponent:@"Library/Caches/widget"];
+    NSString *value = [NSString stringWithContentsOfURL:containerURL encoding:NSUTF8StringEncoding error:&err];
+    return value;
+}
+
         
    ## 2.通过密码分享   
    sdsda
