@@ -15,7 +15,7 @@
     /**   
      这里的URL是有固定格式的，://前边的“hjWidgetDemo”是Containing APP添加的URL Types里添加的URL Schemes，这里是必须一致，否则会跳转失败的   
      **/
-     NSString *urlString = [NSString stringWithFormat:@"hjWidgetDemo://action=%ld",sender.tag-120];   
+     NSString *urlString = [NSString stringWithFormat:@"hjWidgetDemo://action=%ld",sender.tag];   
      [self.extensionContext openURL:[NSURL URLWithString:urlString] completionHandler:^(BOOL success)    
      {
         if (success == YES) {
@@ -29,4 +29,34 @@
   
   ## 2.数据共享  
   
-  
+  ### ①通过NSFileManager来实现   
+  >>存数据：   
+  >>>```objc   
+  /**
+ 通过NSFileManager存数据
+
+ @return 是否存储成功
+ */
+- (BOOL)saveDataByNSFileManager
+{
+    NSError *err = nil;
+    
+    /**    这里的groupIdentifier是在APP Groups里添加的Item    **/
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.hjfirst"];
+    containerURL = [containerURL URLByAppendingPathComponent:@"Library/Caches/widget"];
+    
+    NSString *value = @"你要存的内容";
+    BOOL result = [value writeToURL:containerURL atomically:YES encoding:NSUTF8StringEncoding error:&err];
+    if (!result)
+    {
+        NSLog(@"存入数据失败，原因 ： %@",err);
+    }
+    else
+    {
+        NSLog(@"存入数据成功，数据 : %@ success.",value);
+    }
+    return result;
+} 
+>>
+
+②取数据
