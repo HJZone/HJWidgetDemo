@@ -95,6 +95,12 @@
 
 取数据   
 
+```objc
+    /**    这是一个获取Today Extension数据的例子    **/
+    NSUserDefaults *sharedDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.hjfirst"];
+    NSLog(@"共享的数据 ： %@",[sharedDefault objectForKey:@"firstStatus"]);
+```
 
+相关博客：
 
 
