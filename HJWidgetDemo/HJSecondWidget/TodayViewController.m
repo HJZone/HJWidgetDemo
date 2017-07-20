@@ -47,6 +47,13 @@
 
 - (void)setUpUI
 {
+    
+    /*
+     需要注意的是：
+        1.如果想要自定义控件的背景颜色，那么需要UI来调配色调，并且要保留透明度！如果把alpha值设置为1，那么你会发现在不同色调屏幕上显示的效果会有很大差异！
+        2.Widget 的生命周期，用户是第一次下拉查看Widget其实就是执行整个TodayViewController生命周期调用过程，如果需要刷新UI，建议子啊viewWillAppear方法里边来进行刷新
+        3.系统为了保证Widget上数据是保持最新的,默认会截取上次显示成功Widget的快照.这个快照会一直保存到新的数据或UI被更新才回被替换。在iOS 10之前，只需把刷新UI的定时器触发代码放置在viewWillAppear即可，但是在iOS 10之后由于新增了折叠和展开模式，系统的widgetActiveDisplayModeDidChange在每次下拉时候都会执行，这可能回产生一些意想不到的问题，这也是我添加 static BOOL lastState的原因了
+     */
     _topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SC_WIDTH, 95)];
     [self.view addSubview:_topView];
     
