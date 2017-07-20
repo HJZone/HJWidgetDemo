@@ -9,7 +9,7 @@
    <div align=left>  
    
     
-   ## 1.唤醒Containing APP     
+ # 1.唤醒Containing APP     
    
    ```objc 
    /*
@@ -30,3 +30,44 @@
 
 
 # 2.数据共享
+   
+   ## 通过NSFileManager来实现数据共享    
+   
+   存数据：
+   
+   ```objc
+   /**
+ 通过NSFileManager存数据
+
+ @return 是否存储成功
+ */
+- (BOOL)saveDataByNSFileManager
+{
+    NSError *err = nil;
+    
+    /**    这里的groupIdentifier是在APP Groups里添加的Item    **/
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.hjfirst"];
+    containerURL = [containerURL URLByAppendingPathComponent:@"Library/Caches/widget"];
+    
+    NSString *value = @"你要存的内容";
+    BOOL result = [value writeToURL:containerURL atomically:YES encoding:NSUTF8StringEncoding error:&err];
+    if (!result)
+    {
+        NSLog(@"存入数据失败，原因 ： %@",err);
+    }
+    else
+    {
+        NSLog(@"存入数据成功，数据 : %@ success.",value);
+    }
+    return result;
+}
+```
+      
+  
+
+      
+   
+## 通过NSUserDefaults来实现数据共享   
+
+      
+      
