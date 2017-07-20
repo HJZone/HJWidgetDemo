@@ -101,6 +101,6 @@
     NSLog(@"共享的数据 ： %@",[sharedDefault objectForKey:@"firstStatus"]);
 ```
 
-相关博客：
+ [ 点击跳转到相关博客 ]( http://blog.csdn.net/drunkard_001/article/details/75393965 )
 
 
