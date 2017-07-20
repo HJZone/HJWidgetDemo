@@ -2,7 +2,8 @@
 --------------
     
         
-     <div align=center><img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif" width="375" height="667" > 
+     <div align=center>
+     ![image](https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif) 
    
     
    <div align=left>  
