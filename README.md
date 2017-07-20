@@ -31,7 +31,7 @@
   
   ### ①通过NSFileManager来实现   
   >>存数据：   
-  >>>```objc   
+  ```objc   
   /**
  通过NSFileManager存数据
 
