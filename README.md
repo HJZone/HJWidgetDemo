@@ -6,7 +6,10 @@
 <div align=center><img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/012.png" width="375" height="667" >      <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/011.png" width="375" height="667">
    
     
-    ## 唤醒Containing APP  
+   <div align=left>  
+   
+    
+   ## 唤醒Containing APP  
    
    ```objc  
     
