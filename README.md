@@ -1,9 +1,10 @@
+<div align=center>
 # HJWidgetDemo
 --------------
    
    最终效果图   仿网易云音乐效果图（左）              仿支付宝效果图（右）  
    
-<div align=center><img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/012.png" width="375" height="667" >      <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/011.png" width="375" height="667">
+<img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/012.png" width="375" height="667" >      <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/011.png" width="375" height="667">
    
     
    <div align=left>  
@@ -101,6 +102,9 @@
     NSLog(@"共享的数据 ： %@",[sharedDefault objectForKey:@"firstStatus"]);
 ```
 
- [ 点击跳转到相关博客 ]( http://blog.csdn.net/drunkard_001/article/details/75393965 )
+
+
+<div align=center>
+ [![ 点击跳转到相关博客 ]]( http://blog.csdn.net/drunkard_001/article/details/75393965 )
 
 
