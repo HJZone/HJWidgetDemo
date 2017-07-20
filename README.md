@@ -29,8 +29,8 @@
   
   ## 2.数据共享  
   
-  ### ①通过NSFileManager来实现   
-  >>存数据：   
+    ①通过NSFileManager来实现   
+         存数据：   
   ```objc   
   /**
  通过NSFileManager存数据
@@ -59,4 +59,20 @@
 } 
 >>
 
-②取数据
+      取数据
+
+```objc   
+/**
+ 通过NSFileManager读取数据
+
+ @return 读取到的数据
+ */
+- (NSString *)readDataByNSFileManager
+{
+    NSError *err = nil;
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.hjfirst"];
+    containerURL = [containerURL URLByAppendingPathComponent:@"Library/Caches/widget"];
+    NSString *value = [NSString stringWithContentsOfURL:containerURL encoding:NSUTF8StringEncoding error:&err];
+    return value;
+}
+
