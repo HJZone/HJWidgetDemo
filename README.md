@@ -1,8 +1,9 @@
 # HJWidgetDemo
 --------------
     
-        
-   <div align=center>
+    
+   效果图
+   <div align=center>
    
     <img src="https://github.com/HJZone/HJWidgetDemo/blob/master/HJWidgetDemo/screenshots/018.gif" width="375" height="667" alt="效果图"/>
 
