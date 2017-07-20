@@ -1,4 +1,5 @@
-<div align=center>
+<div align=center>    
+
 # HJWidgetDemo
 --------------
    
@@ -106,5 +107,5 @@
 
 <div align=center>
  [![ 点击跳转到相关博客 ]]( http://blog.csdn.net/drunkard_001/article/details/75393965 )
-
+[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
 
