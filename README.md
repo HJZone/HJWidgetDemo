@@ -12,7 +12,8 @@
    ## 1.唤醒Containing APP  
    
    
-    ```objc  
+    ```objc   
+    
     /*
      这里的URL是有固定格式的，://前边的“hjWidgetDemo”是Containing APP添加的URL Types里添加的URL Schemes，这里是必须一致，否则会跳转失败的
      */
@@ -28,7 +29,8 @@
         }
     }];
     ```
-  
+     
+     
   ## 2.数据共享  
   
   通过NSFileManager来实现   
