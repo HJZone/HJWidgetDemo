@@ -11,7 +11,7 @@
     
    ## 唤醒Containing APP  
    
-   ```  
+    
     
      //这里的URL是有固定格式的，://前边的“hjWidgetDemo”是Containing APP添加的URL Types里添加的URL Schemes，这里是必须一致，否则会跳转失败的   
      NSString *urlString = [NSString stringWithFormat:@"hjWidgetDemo://action=%ld",sender.tag-120];   
@@ -25,4 +25,4 @@
             NSLog(@"跳转失败");
         }
     }];
-```
+
