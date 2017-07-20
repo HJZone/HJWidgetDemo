@@ -11,10 +11,7 @@
     
    ## 1.唤醒Containing APP     
    
-   ```objc   
-   
-    
-     ```      
+        
    ## 2.通过密码分享   
    sdsda
        
